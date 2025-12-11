@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form action="/user" method="POST">
+        First Name: <input type="text" name="first_name" required><br><br>
+        Last Name: <input type="text" name="last_name" required><br><br>
+        Gmail: <input type="email" name="email" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff6a00, #ff9500);
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* LEFT SIDE */
+        .left-box {
+            width: 40%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .left-box h1 {
+            margin-top: -40px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .about-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* RIGHT SIDE */
+        .form-box {
+            width: 45%;
+            background: white;
+            padding: 40px;
+            border-radius: 40px 10px 10px 40px;
+            box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background: orange;
+            color: white;
+            width: 120px;
+            padding: 12px;
+            float: right;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .submit-btn:hover {
+            background: #e58300;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-box">
+            <div class="arrow">⬇</div>
+            <h1>PROJECT TASK</h1>
+            <p>The application performs data validation, stores the data securely in MongoDB, and provides an API to retrieve all user entries.</p>
+            <button class="about-btn">Submitted to Team PeopleXM</button>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="form-box">
+            <h2>Register Here</h2>
+
+            <form action="/user" method="POST">
+                <input class="input-field" type="text" name="first_name" placeholder="Name" required>
+                <input class="input-field" type="text" name="last_name" placeholder="Last Name" required>
+                <input class="input-field" type="email" name="email" placeholder="Email" required>
+                
+                <input class="submit-btn" type="submit" value="Register">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
