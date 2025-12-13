@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Form</title>
+    <title>Update User</title>
 
     <style>
         body {
@@ -29,7 +29,7 @@
 
         .left-box h1 {
             margin-top: -40px;
-            font-size: 50px;
+            font-size: 48px;
             font-weight: bold;
         }
 
@@ -75,7 +75,7 @@
         .submit-btn {
             background: orange;
             color: white;
-            width: 120px;
+            width: 140px;
             padding: 12px;
             float: right;
             border: none;
@@ -92,32 +92,44 @@
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- LEFT SIDE -->
-        <div class="left-box">
-            <div class="arrow">⬇</div>
-            <h1>PROJECT TASK</h1>
-            <p>The application performs data validation, stores the data securely in MongoDB, and provides an API to retrieve all user entries.</p>
-            <button class="about-btn">Submitted to Team PeopleXM</button>
-        </div>
-
-        <!-- RIGHT FORM -->
-        <div class="form-box">
-            <h2>Register Here</h2>
-
-            <form action="/user" method="POST">
-                <input class="input-field" type="text" name="first_name" placeholder="Name" required>
-                <input class="input-field" type="text" name="last_name" placeholder="Last Name" required>
-                <input class="input-field" type="email" name="email" placeholder="Email" required>
-                
-                <input class="submit-btn" type="submit" value="Register">
-            </form>
-            <a class="submit-btn" type="submit" href="/show" value="ShowData">ShowData</a>
-        </div>
-
+    <!-- LEFT SIDE -->
+    <div class="left-box">
+        <div class="arrow">✏️</div>
+        <h1>UPDATE USER</h1>
+        <p>Edit the existing user details and update them securely in the database.</p>
+        <button class="about-btn">PeopleXM Project</button>
     </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-box">
+        <h2>Update Details</h2>
+
+        <form method="POST">
+            <input class="input-field" 
+                   type="text" 
+                   name="first_name" 
+                   value="{{ user['first_name'] }}" 
+                   required>
+
+            <input class="input-field" 
+                   type="text" 
+                   name="last_name" 
+                   value="{{ user['last_name'] }}" 
+                   required>
+
+            <input class="input-field" 
+                   type="email" 
+                   name="email" 
+                   value="{{ user['email'] }}" 
+                   required>
+
+            <input class="submit-btn" type="submit" value="Update">
+        </form>
+    </div>
+
+</div>
 
 </body>
 </html>
-
