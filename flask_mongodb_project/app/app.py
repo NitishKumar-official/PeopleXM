@@ -14,7 +14,11 @@ app = Flask(__name__)
 application = app   # for deployment (Render / Gunicorn)
 
 # ---- MongoDB Connection ----
-client = MongoClient(os.getenv("MONGO_URI"))
+client = MongoClient(
+    MONGO_URI,
+    tls=True,
+    tlsAllowInvalidCertificates=True
+)
 db = client["peopleXM"]
 users_collection = db["user"]
 
