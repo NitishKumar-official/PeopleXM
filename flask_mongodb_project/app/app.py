@@ -14,6 +14,7 @@ app = Flask(__name__)
 application = app   # for deployment (Render / Gunicorn)
 
 # ---- MongoDB Connection ----
+MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(
     MONGO_URI,
     tls=True,
