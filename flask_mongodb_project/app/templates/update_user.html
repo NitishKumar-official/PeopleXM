@@ -4,6 +4,10 @@
     <title>Update User</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -13,10 +17,11 @@
 
         .container {
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            gap: 20px;
         }
 
         /* LEFT SIDE */
@@ -28,9 +33,9 @@
         }
 
         .left-box h1 {
-            margin-top: -40px;
             font-size: 48px;
             font-weight: bold;
+            margin-bottom: 20px;
         }
 
         .arrow {
@@ -75,17 +80,56 @@
         .submit-btn {
             background: orange;
             color: white;
-            width: 140px;
-            padding: 12px;
-            float: right;
+            padding: 12px 30px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
+            float: right;
         }
 
         .submit-btn:hover {
             background: #e58300;
+        }
+
+        /* 🔹 TABLET */
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-box,
+            .form-box {
+                width: 90%;
+            }
+
+            .form-box {
+                border-radius: 20px;
+            }
+
+            .left-box h1 {
+                font-size: 40px;
+            }
+        }
+
+        /* 🔹 MOBILE */
+        @media (max-width: 576px) {
+            .left-box h1 {
+                font-size: 32px;
+            }
+
+            .arrow {
+                font-size: 45px;
+            }
+
+            .form-box {
+                padding: 25px;
+            }
+
+            .submit-btn {
+                width: 100%;
+                float: none;
+            }
         }
     </style>
 </head>
