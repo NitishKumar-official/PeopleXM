@@ -3,8 +3,7 @@ name = "PeopleXM"
 version = "0.1.0"
 description = "A web app project for PeopleXM"
 authors = ["Nitish Kumar <your-email@example.com>"]
-readme = "README.md"
-packages = [{ include = "app" }]
+
 
 [tool.poetry.dependencies]
 python = "^3.13"
